@@ -22,8 +22,8 @@ http_reviews.raise_for_status()
 dict_reviews = http_reviews.json()
 list_review = [review["description"] for review in dict_reviews["data"]]
 
-# Modelo de até 1B, conforme a recomendação da aula (slides 5 e 6).
-llm_resposta = ChatOllama(model="qwen3.5:0.8b", temperature=0, reasoning=False)
+# Modelo local já instalado no computador.
+llm_resposta = ChatOllama(model="qwen3.5:4b", temperature=0, reasoning=False)
 # Somente a classificação precisa seguir o esquema JSON.
 llm = llm_resposta.bind(format=AnswerSchema.model_json_schema())
 output_parser = StrOutputParser()
