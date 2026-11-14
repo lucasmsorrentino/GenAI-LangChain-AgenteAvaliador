@@ -13,7 +13,7 @@ Com Python 3.12 e Ollama instalados, abra o PowerShell na pasta do projeto:
 ```powershell
 py -3.12 -m venv .venv
 .\.venv\Scripts\python.exe -m pip install -r requirements.txt
-ollama pull qwen3.5:0.8b
+ollama pull qwen3.5:4b (que já estáva instalado no computador)
 .\.venv\Scripts\python.exe agente_avaliacoes.py
 ```
 
